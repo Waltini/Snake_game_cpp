@@ -97,7 +97,7 @@ int main(void){
     }
     glfwTerminate();
     return 0;
-}
+}//fix attempt - can delete
 
 
 
