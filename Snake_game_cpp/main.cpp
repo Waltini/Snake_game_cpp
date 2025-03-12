@@ -66,4 +66,4 @@ void Logic() {
     }
     glfwTerminate();
     return 0;
-}
+
