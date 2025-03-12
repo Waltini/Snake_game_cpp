@@ -98,6 +98,6 @@ int main(void) {
     }
     glfwTerminate();
     return 0;
-}//fix attempt - can delet
+}//fix attempt - can dele
 
 // blank main hopefully fixes merge problem
