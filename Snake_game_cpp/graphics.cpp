@@ -1,7 +1,11 @@
 #include <GLFW/glfw3.h>
+#include "error_callback.h"
+#include "key_callback.h"
 
 int main(void)
 {
+    glfwSetErrorCallback(error_callback);
+
     GLFWwindow* window;
 
     /* Initialize the library */
@@ -15,6 +19,8 @@ int main(void)
         glfwTerminate();
         return -1;
     }
+
+    glfwSetKeyCallback(window, key_callback);
 
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
