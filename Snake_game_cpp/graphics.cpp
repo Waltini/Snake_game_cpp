@@ -4,6 +4,7 @@
 
 int main(void)
 {
+    /* Set the error callback to the header function error_callback */
     glfwSetErrorCallback(error_callback);
 
     GLFWwindow* window;
@@ -20,6 +21,7 @@ int main(void)
         return -1;
     }
 
+    /* Sets the key callback to the key_callback header function */
     glfwSetKeyCallback(window, key_callback);
 
     /* Make the window's context current */
