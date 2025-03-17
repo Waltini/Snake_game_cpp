@@ -1,11 +1,14 @@
 // blank main hopefully fixes merge problem
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include <string>
+#include <stdlib.h>
 
 bool gameOver;
 const int width = 20;
 const int height = 20;
 int headX, headY, fruitX, fruitY;
+enum edirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
 edirection dir;
 
 void Setup() {
@@ -28,6 +31,8 @@ void Draw() {
     std::cout << "\n";
 
     for (int i = 0; i < height; i++) {
+        std::cout << "#";
+        for (int j = 0; j < height; j++) {
             if (j == 0) {
                 std::cout << "#";
             }
@@ -43,6 +48,7 @@ void Draw() {
             else {
                 std::cout << " ";
             }
+        }
     }
     for (int i = 0; i < width + 1; i++) {
         std::cout << "#";
@@ -57,6 +63,7 @@ void Logic() {
 
 }
 
+int main(){
     Setup();
     while (!gameOver) {
         Draw();
