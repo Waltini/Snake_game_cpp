@@ -1,4 +1,3 @@
-// blank main hopefully fixes merge problem
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <string>
